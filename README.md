@@ -13,6 +13,7 @@ It was created because of the lack of cryptocurrency-enabled donation websites (
 # Examples
 My donation buttons at top of the README are great examples, you can use them for your own projects!
 # To-Do
+* DARK THEME OMG
 * Add DASH address validation
 * Add Stellar compatibility
 * Add Stellar address validation
