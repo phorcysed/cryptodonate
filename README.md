@@ -1,4 +1,5 @@
 [![BTC](https://img.shields.io/badge/btc-donate-red?color=f08b16&logo=bitcoin&style=flat-square)](https://kvm46.github.io/cryptodonate/btc.html?address=1BWWu53hkVcJanjzHWJi83HZcV3WMjS3At&note=https://github.com/kvm46)
+[![BCH](https://img.shields.io/badge/bch-donate-green?color=2db300&logo=cash-app&style=flat-square)](https://kvm46.github.io/cryptodonate/bch.html?address=qp9j0cp6naqxgw3elu79pf9m63u85qmmlqasaxkuze&note=https://github.com/kvm46)
 ***
 # What ?
 CryptoDonate is a website that will allow you to receive cryptocurrency from your users!
