@@ -1,0 +1,51 @@
+<link href="https://cdn.jsdelivr.net/npm/inter-ui@3.5.0/inter.min.css" nonce="edb8ed63-3769-43de-a500-9aaea59fe2df" rel="stylesheet"/>
+<link href="style.css" nonce="edb8ed63-3769-43de-a500-9aaea59fe2df" rel="stylesheet"/>
+<script type="text/javascript" src="qrcode.min.js"></script>
+<script type="text/javascript" src="util.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cryptaddress-validator@1.1.1"></script>
+<title>CryptoDonate - ETH</title>
+<div class="centered">
+    <div id="notediv">
+        <span id="notespan" class="sc-1ryi78w-0 gCzMgE sc-16b9dsl-1 kUAhZx sc-1n72lkw-0 lhmHll" opacity="1"></span>
+    </div>
+    <div class="sok7o1-1 cJcFXC">
+        <div class="sok7o1-2 mZXza">
+            <div class="sok7o1-4 kzyjtB">
+                <div class="sok7o1-5 itDqRh"><span class="sc-1ryi78w-0 gCzMgE sc-16b9dsl-1 kUAhZx sc-1n72lkw-0 lhmHll" opacity="1">Send ETH to the following address to complete this donation, or use the QR Code.</span><div id="qrcode"></div>
+                    <div class="sok7o1-8 igaMiU"><path fill="#FFFFFF" d="M0,0 h33v33H0z"></path></div>
+                    <div mode="horizontal" class="sc-5q6wng-0 jmjvDz"><span mode="horizontal" class="sc-5q6wng-1 hYnJDH" id="address">placeholder</span><button id="copybutton" onclick="copyaddr();" mode="horizontal" class="sc-1t2k7dn-0 ePVwcm sc-5q6wng-2 fxqrEM" type="button">Copy</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    if(findGetParameter("address") == null) {
+        document.body.innerHTML = "Please provide a ETH Address.";
+    } else {
+        if(cryptaddress("eth").test(findGetParameter("address")) == true) {
+            window.address = findGetParameter("address");
+            document.getElementById("address").innerHTML = window.address
+            let qrCode = new QRCode(document.getElementById("qrcode"), {
+                width:220,
+                height:220,
+                text:"ethereum:"+window.address
+            })
+            function copyaddr() {
+                navigator.clipboard.writeText(window.address);
+                document.getElementById("copybutton").innerHTML = "Copied !";
+                document.getElementById("copybutton").style.backgroundColor = "green";
+                setTimeout(function() {
+                    document.getElementById("copybutton").innerHTML = "Copy";
+                document.getElementById("copybutton").style.backgroundColor = "#0C6CF2";
+                },1000)
+            }
+        } else {
+            document.body.innerHTML = "Please provide a valid ETH Address.";
+        }
+    }
+    if(findGetParameter("note") != null) {
+        document.getElementById("notediv").className = "r35xbb-0 sok7o1-3 bSKdkR";
+        document.getElementById("notespan").innerHTML = "<center>Note from creator :</center><br><br><center>"+findGetParameter("note").replace("<","").replace(">","")+"</center>";
+    }
+</script>
