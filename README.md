@@ -2,9 +2,7 @@
 ***
 # What ?
 CryptoDonate is a website that will allow you to receive cryptocurrency from your users!
-***
 # Why ?
 It was created because of the lack of cryptocurrency-enabled donation websites (patreon,utip,tipee,etc).
-***
 # Examples
 My donation buttons at top of the README are great examples, you can use them for your own projects!
