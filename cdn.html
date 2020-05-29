@@ -1,3 +1,4 @@
+
 <link href="https://cdn.jsdelivr.net/npm/inter-ui@3.5.0/inter.min.css" nonce="edb8ed63-3769-43de-a500-9aaea59fe2df" rel="stylesheet"/>
 <link href="style.css" nonce="edb8ed63-3769-43de-a500-9aaea59fe2df" rel="stylesheet"/>
 <script type="text/javascript" src="qrcode.min.js"></script>
@@ -20,7 +21,7 @@
 </div>
 <script>
     if(findGetParameter("address") == null) {
-        document.body.innerHTML = "🇨🇦 Please provide a CDN Address. 🇨🇦";
+        document.body.innerHTML = "<i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i> Please provide a CDN Address. <i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i>";
     } else {
         //if(valid address) {
             window.address = findGetParameter("address");
@@ -32,19 +33,19 @@
             })
             function copyaddr() {
                 navigator.clipboard.writeText(window.address);
-                document.getElementById("copybutton").innerHTML = "🇨🇦 Copied ! 🇨🇦";
+                document.getElementById("copybutton").innerHTML = "<i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i> Copied ! <i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i>";
                 document.getElementById("copybutton").style.backgroundColor = "green";
                 setTimeout(function() {
-                    document.getElementById("copybutton").innerHTML = "🇨🇦 Copy 🇨🇦";
+                    document.getElementById("copybutton").innerHTML = "<i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i> Copy <i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i>";
                 document.getElementById("copybutton").style.backgroundColor = "#0C6CF2";
                 },1000)
             }
         /*} else {
-            document.body.innerHTML = "🇨🇦 Please provide a valid CDN Address. 🇨🇦";
+            document.body.innerHTML = "<i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i> Please provide a valid CDN Address. <i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i>";
         }*/
     }
     if(findGetParameter("note") != null) {
         document.getElementById("notediv").className = "r35xbb-0 sok7o1-3 bSKdkR";
-        document.getElementById("notespan").innerHTML = "<center>🇨🇦 Note from creator :</center><br><br><center>"+findGetParameter("note").replace("<","").replace(">","")+" 🇨🇦</center>";
+        document.getElementById("notespan").innerHTML = "<center><i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i> Note from creator :</center><br><br><center>"+findGetParameter("note").replace("<","").replace(">","")+" <i class="fab fa-canadian-maple-leaf" style="color: #dc3545"></i></center>";
     }
 </script>
